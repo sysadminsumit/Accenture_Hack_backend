@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.ensemble import GradientBoostingClassifier
 import numpy as np
 from sklearn.model_selection import train_test_split
-
+import pandas
 
 def get(list):
     diabetes = pd.read_csv('diabetes.csv')
@@ -15,5 +15,5 @@ def get(list):
     gb = GradientBoostingClassifier(min_samples_split=4, random_state=0)
     gb.fit(X_train, y_train)
     B = np.reshape(list, (-1, 5))
-    #print(B)
+    print(B)
     return gb.predict(B)

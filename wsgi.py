@@ -6,6 +6,7 @@ from flask_pymongo import PyMongo
 import urllib.parse
 import diab_prediction
 import sys
+import numpy as np
 
 application = Flask(__name__)
 
